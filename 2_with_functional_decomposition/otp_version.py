@@ -1,5 +1,5 @@
 import random #random module to get random integers to create OTP
-import inputInf #email and password of sender from another file
+import senders_data #email and password of sender from another file
 import smtplib #simple message transfer protocol#library to send email to users email address
 
 n=6
@@ -11,8 +11,8 @@ def generate_otp(n):
 
 server =smtplib.SMTP('smtp.gmail.com',587)
 
-Senders_email = inputInf.email
-Senders_password= inputInf.password
+Senders_email = senders_data.email
+Senders_password= senders_data.password
 
 def login_into_sendersemail():
     server.starttls()
